@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Quète de l'éternelle moisson | DofusTools</title>
+		<meta name="description" content="Outil de gestion pour la quête Dofus de l’Éternelle moisson." />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link type="image/x-icon" rel="shortcut icon" href="sources/favicon-32x32.png">
+
+		<link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css">
+		<link rel="stylesheet" href="style.min.css">
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-54733863-3', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<header class="header" role="banner">
+			<div class="header_logo">
+				<h1>DOFUS<span>TOOLS</span></h1>
+			</div>
+			<nav class="header_nav" role="navigation" aria-hidden="true">
+				<ul>
+					<li>Accueil</li>
+					<li>Devblog</li>
+					<li>Contact</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="content" role="main">	
+			<section class="content_intro">
+				<article>
+					<div>
+						<h1>L'ÉTERNELLE MOISSON</h1>
+						<p> Si vous n'avez pas peur de voyager au quatre coin du monde des Douze et d'affronter les plus terribles créatures le peuplant, la quête de l'éternelle moisson est faite pour vous ! Elle se lance auprès d'Otomaï, qui se trouve dans le Tronc de l'arbre Hakam en [-55,15] et vous permez d'obtenir le Dofus Ocre. Pour débuter la quête, vous devez être au minimum niveau 40 et possédez le sort capture d'âme (obtenu à la fin du donjon Bulbes)</p>	
+					</div>
+				</article>	
+			</section>
+
+			<section class="content_main">
+				<aside class="content_main-data">
+					<article class="mod-block mod-block-info">
+						<h2>Traitement de vos données</h2>
+						<p>Pour utilisez ce site, nul besoin d'inscription, vos données sont stocker localement dans votre navigateur. Vous retrouverez donc l'état de votre progression à chaque visite sur le site.</p>
+					</article>	
+				</aside>
+
+				<aside class="content_main-stats">
+					<h3 class="title_progressBar">Progression global :</h3>
+					<div id="barre_etape_all" aria-hidden="true"></div>	
+				</aside>
+
+				<button class="bt_hiddenEtape">Cacher les étapes terminées</button>
+				
+				<div class="content_main-accordion js-accordion" data-accordion-prefix-classes="animated-accordion">
+				</div>
+			</section>
+		</div>
+
+
+		<footer class="footer" role="contentinfo">
+			<ul>
+				<li><a aria-label="Dépôt Github (nouvelle fenêtre)" target="_blank" href="https://github.com/dofustools/eternelle-moisson">Dépôt Github</a> <span>|</span></li>
+				<li><a aria-label="License (nouvelle fenêtre)" target="_blank" href="https://github.com/dofustools/eternelle-moisson/blob/master/LICENSE.md">Licence</a></li>
+			</ul>
+		</footer>
+
+		<!-- Script -->
+			<script src="bower_components/jquery/dist/jquery.js"></script>
+			<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+			<script src="creataccordion.js"></script>
+			<script src="bower_components/jquery-accessible-accordion-aria/jquery-accessible-accordion-aria-legacy-1.2.0.js"></script>
+			<script src="functions.js"></script>
+		<!--  -->
+
+	</body>
+</html>

@@ -1,0 +1,486 @@
+/* ==========================================================================
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+
+/* ==========================================================================
+   Variable
+   ========================================================================== */
+   	$color-primary: #ff9f0b;
+   	$color-primary-second: #FFA519;
+   	$color-comp: #014378;
+   	$color-comp-second: #002b4d;
+   	$color-green: #8BC34A;
+   	$color-green-dark: #6F9C3B;
+   	$dark-10: #130b09;
+   	$dark-20: #4e4332;
+   	$dark-30: #9a8667;
+   	$light-grey: #f2F5F7;
+   	
+   	$br: 3px;
+
+
+
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+	* {
+	    box-sizing: border-box;
+	}
+	html {
+	    font-family: 'Lato', sans-serif;
+	}
+	body {
+		background: $light-grey;
+	}
+	h1,h2,h3,h4,h5,h6,p {
+		line-height: 150%;
+	}
+
+	.header,
+	.content_main {
+		max-width: 100%;
+	}
+
+	.hidden {
+		display: none !important;
+	}
+
+	a:hover,
+	a:active {
+		opacity: 0.9;
+	}
+	a:visited {
+		opacity: 0.8;
+	}
+
+	button {
+		cursor: pointer;
+	}
+
+	@import 'https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Lato|Roboto|Slabo+27px';
+
+
+/* ==========================================================================
+   Block
+   ========================================================================== */
+   	/* Header
+   	   ========================================================================== */
+   	   	.header {
+   	   		display: flex;
+   	   		padding: 10px 20%;
+   		    background: $dark-10;
+   	   	}
+   	   	.header_logo,
+   	   	.header_nav {
+   	   		flex: 1;
+   	   	}
+   	   	.header_nav {
+   	   		display: none;
+   	   	}
+
+   	   	.header_logo {
+   	   		font-family: 'Roboto', sans-serif;
+   		    color: white;
+	   	   	h1 {
+	   		    font-weight: 300;
+		        font-size: 2rem;
+	    		letter-spacing: 2px;
+		   	   	span {
+		   	   		font-weight: 700;
+		   	   		color: white;
+		   	   	}
+	   	   	}
+   	   	}
+
+   	/* Content
+   	   ========================================================================== */
+   	   	.content {
+   	   		display: flex;
+    		flex-wrap: wrap;
+   	   	}
+   	   	.content_intro {
+			background: url(sources/bg.jpg) no-repeat center 0px $dark-20;
+			// background-attachment: fixed;
+			background-size: cover;
+			color: white;
+			position: relative;
+			overflow: hidden;
+	   	   	article {
+	   		    background: rgba(55,52,52,0.35) url(sources/stripes.png);
+	   	   		padding: 75px 20%;
+		   	   	div {
+		   	   		background: rgba(19, 11, 9, 0.8);
+				    border-radius: 3px;
+				    width: 50%;
+		   	   	}
+	   	   	}
+	   	   	h1 {
+	   	   		background: rgba(19, 11, 9, 0.8);
+				text-align: center;
+				font-size: 1.8rem;
+				letter-spacing: 2px;
+				font-family: 'Slabo 27px', cursive;
+				padding: 5px 20px;
+	   	   	}
+	   	   	p {
+	   	   		padding: 20px;
+	   	   	}
+   	   	}
+
+   	   	.content_filtre {
+   	   		flex: 1;
+   	   		display: none;
+   	   	}
+
+   	   	.content_main {
+   	   		flex: 4;
+   	   		padding: 0px 20%;
+   	   	}
+   	   	.content_main-data,
+   	   	.content_main-stats {
+   	   		padding: 35px 0px;
+   	   	} 
+
+   	   	/* Accordeon */
+   	   		.checkMonstre {
+   	   			font-weight: bold;
+   	   		}
+   	   		.checkLieu {
+   	   			font-style: italic;
+   	   			display: block;
+   	   		}
+
+   	   	/* Bouton afficher/cacher etape */
+   	   		.bt_hiddenEtape {
+   	   		    padding: 15px;
+			    border-radius: 3px;
+			    border: 1px solid $dark-30;
+			    background: $dark-10;
+			    margin: 10px 0px;
+			    color: white;
+			    font-size: 1em;
+   	   		}
+   	   		.bt_hiddenEtape.visible {
+   	   			background: $color-comp;
+   	   			border-color: $color-comp-second;
+   	   		}
+   	   		.bt_hiddenEtape:hover,
+   	   		.bt_hiddenEtape:focus {
+   	   			background: black;
+   	   		}
+   	   		.bt_hiddenEtape.visible:hover,
+   	   		.bt_hiddenEtape.visible:focus {
+   	   			background: $color-comp-second;
+   	   		}
+
+   	   	/* Stats global */
+   	   		.title_progressBar {
+   	   			span>span {
+   	   				padding: 0 10px;
+   	   			}
+   	   			.pc, .nb {
+   	   				border-right: 1px solid $color-primary;
+   	   			}
+   	   		}
+
+   	/* Footer
+   	   ========================================================================== */
+   	   	.footer {
+   	   		background: $dark-10;
+   	   		margin-top: 25px;
+	   	   	ul {
+	   	   		text-align: center;
+	   	   		padding: 20px;
+	   	   	}
+	   	   	li {
+	   	   		display: inline-block;
+	   	   	}
+   	   	}
+   	   	.footer,
+   	   	.footer a {
+   	   		color: white;
+   	   	}
+
+/* ==========================================================================
+   Module
+   ========================================================================== */
+	/* Block with border + title
+	   ========================================================================== */
+   	   	.mod-block {
+			background: white;
+			padding: 15px;
+			position: relative;
+			margin-top: 22px;
+	   		border-radius: $br;
+			h2 {
+				position: absolute;
+				top: -22px;
+				left: -1px;
+				font-size: 1.4rem;
+				padding: 0px 15px;
+				color: white;
+		   		border-radius: $br $br $br 0;
+	   	   	}
+	   	   	p {
+	   	   		color: $dark-20;
+	   		    margin-top: 6px;
+	   	   	}
+   	   	}
+
+   	   	/* Info */
+   	   		.mod-block-info {
+				border: 1px solid $color-comp;
+				h2 {
+					background: $color-comp;	
+				}
+   	   		}
+
+   	/* Accordeon
+   	   ========================================================================== */
+   	   	.animated-accordion h3 {
+			font-size: 1.2rem;	
+   	   	}
+
+	   	.animated-accordion__header {
+			font-size: 1.4rem;	
+			width: 100%;
+			text-align: left;
+			margin: 10px 0px;
+	   		border-radius: $br $br 0 0;
+	   		display: flex;
+	   		span {
+	   			margin-left: auto;
+	   		}
+	   		.pc {
+   			    border-right: 1px solid $color-primary;
+    			padding: 5px 10px;
+	   		}
+	   	} 
+   	   	.animated-accordion__header,
+   	   	.animated-accordion__header[aria-expanded="true"],
+   	   	.animated-accordion__header[aria-expanded="true"] + .animated-accordion__panel {
+			background: white;
+			color: $dark-10;  	   		
+   	   	}
+   	   	.animated-accordion__header,
+   	   	.animated-accordion__header[aria-expanded="true"] + .animated-accordion__panel {
+		    border: 1px solid $dark-30;
+			padding: 20px;
+   	   	}
+		.animated-accordion__header[aria-expanded="true"] {	
+			/* border-bottom: 0px; */
+			margin-bottom: 0px;
+		}
+		.animated-accordion__header[aria-expanded="true"] + .animated-accordion__panel {
+			border-top: 0px;
+			margin-bottom: 10px;
+	   		border-radius: 0 0 $br $br;
+		}
+		.animated-accordion__header[aria-expanded="true"]+.animated-accordion__panel ul {
+			margin-top: 25px;
+		}
+
+		/* Etape validé */
+			.animated-accordion__header.validated,
+			.animated-accordion__header.validated[aria-expanded="true"] {
+				background: $color-comp;
+				border-color: $color-comp-second;
+				color: white;	
+			    // text-shadow: 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black;	
+				.pc {
+					border-color: white;
+				}
+			}
+			.animated-accordion__header.validated[aria-expanded="true"] {
+				border-bottom: 0px;
+			}
+			.animated-accordion__header[aria-expanded="true"]+.animated-accordion__panel.validated {
+				border-top: 0px;
+			}
+
+			.animated-accordion__title {
+				border: 0;
+			    clip: rect(0 0 0 0);
+			    height: 1px;
+			    margin: -1px;
+			    overflow: hidden;
+			    padding: 0;
+			    position: absolute;
+			    width: 1px;
+			}
+
+		/* Animation accordion */
+			.animated-accordion__panel {
+				 display: block;
+				 overflow: hidden;
+				 opacity: 1;
+				 transition: visibility 0s ease, max-height 1s ease, opacity 1s ease ;
+				 max-height: 100em;
+				 /* magic number for max-height = enough height */
+				 visibility: visible;
+				 transition-delay: 0s;
+				 margin: 0;
+				 padding: 0;
+			}
+			.animated-accordion__panel ul {
+				margin-top: 10px;
+			}
+			.animated-accordion__panel li {
+				margin: 10px 0px;
+				border-bottom: 1px solid #dadada;
+				padding-bottom: 10px;
+			}
+			/* This is the hidden state */
+			[aria-hidden=true].animated-accordion__panel {
+				 display: block;
+				 max-height: 0;
+				 opacity: 0;
+				 visibility: hidden;
+				 transition-delay: 1s, 0s, 0s;
+				 margin: 0;
+				 padding: 0;
+			}
+
+	/* ProgressBar
+	   ========================================================================== */
+		.ui-widget.ui-widget-content {
+		    border: 1px solid $color-primary;
+		    background: white;
+		    border-radius: 30em;
+		    margin: 5px 0px;
+		}
+		.ui-progressbar .ui-progressbar-value {
+			background: $color-primary-second;
+		    border-radius: 30em;
+		    margin: 0px;
+		}
+		.ui-widget-header {
+		    border: 1px solid $color-primary;
+		}
+
+	/* Checkbox
+	   ========================================================================== */
+		/* Cachons la case à cocher */
+		[type="checkbox"]:not(:checked),
+		[type="checkbox"]:checked {
+		  position: absolute;
+		  left: -9999px;
+		}
+		 
+		.img-bestiaire {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 15px;
+		}
+		[type="checkbox"]:not(:checked) + label,
+		[type="checkbox"]:checked + label {
+			display: inline-block;
+			max-width: calc(100% - 67px);
+			vertical-align: middle;
+			position: relative; /* permet de positionner les pseudo-éléments */
+			padding-left: 25px; /* fait un peu d'espace pour notre case à venir */
+			cursor: pointer;    /* affiche un curseur adapté */
+		}
+
+		/* Aspect des checkboxes */
+		/* :before sert à créer la case à cocher */
+		[type="checkbox"]:not(:checked) + label:before,
+		[type="checkbox"]:checked + label:before {
+		  content: '';
+		  position: absolute;
+		  left:0; 
+		  top: 1px;
+		  width: 17px; height: 17px; /* dim. de la case */
+		  border: 1px solid $color-primary;
+		  border-radius: 3px; /* angles arrondis */
+		  box-shadow: inset 0 1px 3px rgba(0,0,0,.3) /* légère ombre interne */
+		}
+		[type="checkbox"]:not(:checked) + label:before {
+			background: white;
+			speak: none;
+		}
+		[type="checkbox"]:checked + label:before {
+			background: $color-primary-second;
+			speak: none;
+		}
+
+		/* Aspect général de la coche */
+		[type="checkbox"]:not(:checked) + label:after,
+		[type="checkbox"]:checked + label:after {
+		  content: '\2714';
+		  position: absolute;
+		  top: 0; left: 4px;
+		  font-size: 14px;
+		  color: white;
+		  transition: all .2s; /* on prévoit une animation */
+		}
+		/* Aspect si "pas cochée" */
+		[type="checkbox"]:not(:checked) + label:after {
+		  opacity: 0; /* coche invisible */
+		  transform: scale(0); /* mise à l'échelle à 0 */
+		  speak: none;
+		}
+		/* Aspect si "cochée" */
+		[type="checkbox"]:checked + label:after {
+		  opacity: 1; /* coche opaque */
+		  transform: scale(1); /* mise à l'échelle 1:1 */
+		  speak: none;
+		}
+
+
+@media screen and (max-width: 992px) {
+	.header,
+	.content_main,
+	.content_intro article {
+	    padding-left: 2%;
+	    padding-right: 2%;
+	}
+	.content_intro article div {
+		width: 100%;
+	}
+	.header_logo h1 {
+		text-align: center;
+	}
+}
